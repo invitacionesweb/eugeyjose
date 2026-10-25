@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Euge y José</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"
+        integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="audiodiv">
+    <audio id="myAudio" preload="auto">
+      <source src="./miley.mp3" type="audio/mpeg">
+    </audio>
+    <div id="playPauseBtn" class="play">
+      <img src="./img/notamusical.png" alt="Icono de música">
+    </div>
+  </div>
+
+  <p data-aos="fade-up" class="titulocontador">Faltan:</p>
+  <div class="contador">
+    <div class="bloque">
+      <div data-aos="fade-up" id="dias" class="numero"></div>
+      <div data-aos="fade-up" class="etiqueta">Días</div>
+    </div>
+    <div class="bloque">
+      <div data-aos="fade-up" id="horas" class="numero"></div>
+      <div data-aos="fade-up" class="etiqueta">horas</div>
+    </div>
+    <div class="bloque">
+      <div data-aos="fade-up" id="minutos" class="numero"></div>
+      <div data-aos="fade-up" class="etiqueta">minutos</div>
+    </div>
+    <div class="bloque">
+      <div data-aos="fade-up" id="segundos" class="numero"></div>
+      <div data-aos="fade-up" class="etiqueta">segundos</div>
+    </div>
+  </div>
+
+  <div class="datos-ubicacion">
+    <div>
+      <div data-aos="fade-down" class="icono0" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <div class="datos">
+      <div>
+        <p data-aos="fade-up">El Recreo</p>
+        <a data-aos="fade-up" class="boton" target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=El+Recreo">
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="novios">
+    <img data-aos="fade-up" src="./img-editable/fotos1.png" alt="">
+    <div class="icono1">
+      <div data-aos="fade-down" class="icon-svg1" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <div class="icono2">
+      <div data-aos="fade-down" class="icon-svg2" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-img"></div>
+  </div>
+
+  <div id="section2" class="accordion">
+    <h3 data-aos="fade-up">Antes de que nos consultes...</h3>
+
+    <div data-aos="fade-up" class="accordion-item">
+      <button class="accordion-header">¿CÓMO ME VISTO?</button>
+      <div class="accordion-content">
+        <p>
+          El dress code es elegante. Dos colores reservados: el blanco es de la novia, y el verde
+          queda para el novio y las damas de honor. ¡El resto es tuyo!
+        </p>
+      </div>
+    </div>
+
+    <div data-aos="fade-up" class="accordion-item">
+      <button class="accordion-header">¿QUÉ LES REGALO?</button>
+      <div class="accordion-content">
+        <p>Tu presencia ya es un regalo para nosotros, pero si querés colaborar con nuestra luna de miel, podés hacerlo por transferencia:</p>
+        <div class="gift-block">
+          <div class="gift-box">
+            <div class="boton2" onclick="copyToClipboard('0000003100013632460809')">Copiar CVU</div>
+          </div>
+          <div class="gift-box">
+            <div class="boton2" onclick="copyToClipboard('eugeyjose.boda')">Copiar Alias</div>
+          </div>
+        </div>
+        <p>Alias: eugeyjose.boda <br> Titular de la cuenta: Eugenia Chahade</p>
+      </div>
+    </div>
+
+    <div data-aos="fade-up" class="accordion-item">
+      <button class="accordion-header">¿PUEDO IR CON UN +1?</button>
+      <div class="accordion-content">
+        <p>La invitación es exclusiva para quien la recibe. Queremos compartir este día solo con nuestros seres queridos. ¡Gracias por entender! 💚</p>
+      </div>
+    </div>
+
+    <div data-aos="fade-up" class="accordion-item">
+      <button class="accordion-header">¿CÓMO LLEGO?</button>
+      <div class="accordion-content">
+        <p>¡No te preocupes! Vamos a tener un micro para quienes no quieran ir en auto. Indicalo en el formulario de confirmación.</p>
+      </div>
+    </div>
+
+  <!--
+      <div data-aos="fade-up" class="accordion-item">
+      <button class="accordion-header">¿CÓMO SIGO EL MINUTO A MINUTO DE LA BODA?</button>
+      <div class="accordion-content">
+        <p>Si hay boda, hay joda, y la joda la mostramos en Instagram. Seguinos para no perderte nada de lo que pase ese día.</p>
+        <br> <a data-aos="fade-up" class="boton2" target="_blank" href="https://www.instagram.com/siquiero.arg/">@siquiero.arg</a>
+        <br> <br>
+      </div>
+    </div>
+    -->
+
+    <div class="icono3">
+      <div data-aos="fade-down" class="icon-svg3" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <div class="icono4">
+      <div data-aos="fade-down" class="icon-svg4" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+  </div>
+
+  <div class="forms">
+    <form name="asistenciaform" method="POST"
+          action="https://script.google.com/macros/s/AKfycbw46zDyXcvZbRs_opZCR4AoWcVpJkPGQdgxywfDwPMTBbjhLG-Xth_PWVelc84Vu84DEQ/exec"
+          class="formulario">
+      <div class="rsvp">
+        <div data-aos="fade-up" class="rsvp" role="img" aria-label="Ícono decorativo"></div>
+      </div>
+      <label data-aos="fade-up" class="formtitle">Solo faltás vos, venís?</label>
+      <p data-aos="fade-up">RECORDÁ COMPLETAR UN FORMULARIO POR PERSONA. <br> CONFIRMÁ ANTES DEL 20 DE DICIEMBRE DE 2026. <br> QUIEN NO CONFIRME ANTES DE ESA FECHA SE CONSIDERA AUSENTE.</p>
+
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="ASISTENCIA" value="sí" required>
+          <span>Sí</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="ASISTENCIA" value="no">
+          <span>No</span>
+        </label>
+      </div>
+
+      <input type="text" name="NOMBRE" placeholder="Nombre" required>
+      <input type="text" name="APELLIDO" placeholder="Apellido" required>
+
+      <select name="DIETA" required>
+        <option value="" disabled selected>¿Alguna dieta especial?</option>
+        <option value="Nada">Nada / Como de todo</option>
+        <option value="Vegetariano">Vegetariano</option>
+        <option value="Vegano">Vegano</option>
+        <option value="Celíaco">Celíaco</option>
+      </select>
+
+      <select name="TRANSPORTE" required>
+        <option value="" disabled selected>¿Cómo vas a ir?</option>
+        <option value="Por mis medios">Por mis medios</option>
+        <option value="Micro">En el micro</option>
+      </select>
+
+      <textarea name="MENSAJE" placeholder="Dejale un mensaje a los novios 🤍"></textarea>
+
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </div>
+
+  <div class="playlist">
+    <div class="novios-div">
+      <h3>Vamos a mover los pies...</h3>
+      <p>RECOMENDALE UNA CANCIÓN AL DJ</p>
+      <div class="playlist-spotify">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3rSsRHHtJLqUd9sBF0NVSd?utm_source=generator&si=e1a244c820fc4491" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+      <br>
+      <a class="boton2" href="https://open.spotify.com/playlist/2F7bfRFwNtskgFSBPcGHgX?si=etxMsM1WRnWhSw1H3g08hw&utm_source=copy-link&pt=9dff041cc550ce37e481ce210f4ec05f&pi=0_rYEmYjQxa-3">Ver playlist</a>
+    </div>
+    <div class="icono5">
+      <div data-aos="fade-down" class="icon-svg5" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <div class="icono6">
+      <div data-aos="fade-down" class="icon-svg6" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+  </div>
+
+  <div class="carrusel-polaroid">
+    <div class="carrusel-track">
+
+      <div class="carrusel-slide" data-index="0">
+        <h3>Primera cita</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel2.png" alt="">
+        </div>
+        <p>Así empezó todo.</p>
+      </div>
+
+      <div class="carrusel-slide" data-index="1">
+        <h3>Vacaciones</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel1.png" alt="">
+        </div>
+        <p>Nuestro primer viaje juntos.</p>
+      </div>
+
+      <div class="carrusel-slide" data-index="2">
+        <h3>Momentos</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel3.png" alt="">
+        </div>
+        <p>Uno de mil mates juntos.</p>
+      </div>
+
+      <div class="carrusel-slide" data-index="3">
+        <h3>Familia</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel4.png" alt="">
+        </div>
+        <p>Nuestros hijos... y ....</p>
+      </div>
+
+            <div class="carrusel-slide" data-index="4">
+        <h3>La propuesta</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel5.png" alt="">
+        </div>
+        <p>Un atardecer soñado.</p>
+      </div>
+
+      <div class="carrusel-slide" data-index="5">
+        <h3>El sí</h3>
+        <div class="polaroid">
+          <img src="./img-editable/carrusel6.png" alt="">
+        </div>
+        <p>Y acá estamos.</p>
+      </div>
+
+    </div>
+
+    <div class="carrusel-nav">
+      <div class="carrusel-dots"></div>
+    </div>
+  </div>
+
+
+
+  <div class="novios">
+    <img data-aos="fade-up" src="./img-editable/fotos2.png" alt="">
+    <div class="icono1">
+      <div data-aos="fade-down" class="icon-svg1" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <div class="icono2">
+      <div data-aos="fade-down" class="icon-svg2" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+  </div>
+
+  <div class="end">
+    <div class="icono7">
+      <div data-aos="fade-down" class="icon-svg7" role="img" aria-label="Ícono decorativo"></div>
+    </div>
+    <h2 data-aos="fade-up">Euge & José</h2>
+    <p data-aos="fade-down">Te esperamos</p>
+  </div>
+
+  <footer>
+    <div class="contenido">
+      <div>
+        <img src="./img/logosiquiero.png" alt="icono si quiero">
+        <p>
+          Hecho con &hearts; <br>
+          &#169; <b>Si,quiero!</b> - invitaciones inteligentes. <br>
+          Todos los derechos reservados.
+        </p>
+      </div>
+      <div class="contenido-list">
+        <ul>
+          <li><a target="_blank" href="https://www.instagram.com/siquiero.arg/"><i class="bi bi-instagram"></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com/Invitaciones-web-112187784608681"><i class="bi bi-facebook"></i></a></li>
+          <li><a target="_blank" href="mailto:siquiero.invitaciones@gmail.com"><i class="bi bi-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./countdwon.js"></script>
+  <script src="./reproductor.js"></script>
+  <script src="./form.js"></script>
+  <script src="script.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const stack = document.getElementById('fotosStack');
+    const fotos = Array.from(stack.querySelectorAll('.foto'));
+    if (fotos.length === 0) return;
+
+    const offsets = [
+      { rotate: -6, x: -12, y: 8 },
+      { rotate: 5,  x: 10,  y: 12 },
+      { rotate: -4, x: 6,   y: -6 }
+    ];
+
+    let current = 0;
+
+    function render() {
+      fotos.forEach((foto, i) => {
+        if (i === current) {
+          foto.style.transform = 'translate(0,0) rotate(0deg) scale(1)';
+          foto.style.zIndex = fotos.length + 1;
+        } else {
+          const dist = (i - current + fotos.length) % fotos.length;
+          const off = offsets[dist % offsets.length];
+          foto.style.transform = `translate(${off.x}px, ${off.y}px) rotate(${off.rotate}deg) scale(0.94)`;
+          foto.style.zIndex = fotos.length - dist;
+        }
+      });
+    }
+
+    render();
+    setInterval(() => {
+      current = (current + 1) % fotos.length;
+      render();
+    }, 3000);
+  });
+  </script>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.carrusel-track');
+    const slides = Array.from(track.querySelectorAll('.carrusel-slide'));
+    const dotsWrap = document.querySelector('.carrusel-dots');
+    let current = 0;
+
+    const offsets = [
+      { rotate: -7, x: -16, y: 10 },
+      { rotate: 6,  x: 14,  y: 14 },
+      { rotate: -4, x: 8,   y: -8 },
+      { rotate: 8,  x: -10, y: 6 }
+    ];
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.addEventListener('click', () => { current = i; render(); });
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function render() {
+      slides.forEach((slide, i) => {
+        const polaroid = slide.querySelector('.polaroid');
+        if (i === current) {
+          polaroid.style.transform = 'translate(0,0) rotate(0deg) scale(1)';
+          slide.style.zIndex = slides.length + 1;
+          slide.classList.add('is-active');
+        } else {
+          const dist = (i - current + slides.length) % slides.length;
+          const off = offsets[dist % offsets.length];
+          polaroid.style.transform = `translate(${off.x}px, ${off.y}px) rotate(${off.rotate}deg) scale(0.94)`;
+          slide.style.zIndex = slides.length - dist;
+          slide.classList.remove('is-active');
+        }
+      });
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+    }
+
+    function next() {
+      current = (current + 1) % slides.length;
+      render();
+    }
+    function prev() {
+      current = (current - 1 + slides.length) % slides.length;
+      render();
+    }
+
+    // Deslizar con el dedo (mobile) o el mouse (desktop) para cambiar de foto
+    let startX = 0;
+    let isDragging = false;
+    const SWIPE_THRESHOLD = 40;
+
+    function dragStart(x) {
+      isDragging = true;
+      startX = x;
+    }
+    function dragEnd(x) {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = startX - x;
+      if (diff > SWIPE_THRESHOLD) next();
+      else if (diff < -SWIPE_THRESHOLD) prev();
+    }
+
+    track.addEventListener('touchstart', (e) => dragStart(e.touches[0].clientX), { passive: true });
+    track.addEventListener('touchend', (e) => dragEnd(e.changedTouches[0].clientX));
+
+    track.addEventListener('mousedown', (e) => { dragStart(e.clientX); e.preventDefault(); });
+    track.addEventListener('mouseup', (e) => dragEnd(e.clientX));
+    track.addEventListener('mouseleave', () => { isDragging = false; });
+
+    render();
+  });
+  </script>
+
+  <script>
+    AOS.init();
+
+    function copyToClipboard(text) {
+      const tempInput = document.createElement("input");
+      document.body.appendChild(tempInput);
+      tempInput.value = text;
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert(`Copiaste los datos de cuenta "${text}" a tu portapapeles`);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Reproduce el audio en el primer scroll (los navegadores bloquean autoplay con sonido)
+      const audio = document.getElementById("myAudio");
+      const playOnScroll = () => {
+        audio.play().catch(e => console.warn("El navegador bloqueó la reproducción automática", e));
+        document.removeEventListener("scroll", playOnScroll);
+      };
+      document.addEventListener("scroll", playOnScroll);
+
+      // Acordeón de preguntas frecuentes (solo uno abierto a la vez)
+      const headers = document.querySelectorAll(".accordion-header");
+      headers.forEach((header) => {
+        header.addEventListener("click", function () {
+          const item = this.parentElement;
+          const wasActive = item.classList.contains("active");
+          headers.forEach((h) => h.parentElement.classList.remove("active"));
+          if (!wasActive) item.classList.add("active");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
