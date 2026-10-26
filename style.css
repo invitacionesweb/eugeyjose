@@ -474,6 +474,8 @@ audio::-webkit-media-controls-current-time-display {
 .accordion-item button {
     margin: auto;
     text-align: center;
+    font-family: var(--font-principal);
+    font-size: 1.3em;
 }
 .accordion-item:last-child {
     border-bottom: none;
